@@ -2,6 +2,7 @@
   import { computed } from "vue";
   import { useHeaderStore } from "../store/header";
   import MainLogo from "@/shared/ui/logo/MainLogo.vue";
+  import { MainMenu } from "@/modules/Menu";
 
   const headerStore = useHeaderStore();
 
@@ -13,6 +14,7 @@
 <template>
   <header class="header" :class="themeClass">
     <MainLogo />
+    <MainMenu />
   </header>
 </template>
 
