@@ -1,0 +1,44 @@
+$title-font: "RobotoSlab", Arial, Helvetica, sans-serif;
+$text-font: "Roboto", Arial, Helvetica, sans-serif;
+$main-dark-color: #1a1b22;
+$second-dark-color: #2f71e5;
+$second-dark-active: #2a65cc;
+$second-dark-hover: #347eff;
+
+$main-light-color: #ffffff;
+$second-ligth-color: #b6bcbf;
+$bg-ligth-color: #f5f6f7;
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-column-reverse {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin gap-check-supports($column-gap: null, $row-gap: null) {
+  @supports (gap: $column-gap) {
+    gap: $column-gap $row-gap;
+  }
+
+  @supports not (gap: $column-gap) {
+    & > :not(:last-child) {
+      margin-right: $row-gap;
+      margin-bottom: $column-gap;
+    }
+  }
+}
+
+@mixin hover-supports {
+  @media (hover: hover) {
+    @content;
+  }
+}
