@@ -1,4 +1,4 @@
-import PopularList from "./components/PopularList.vue";
+import PopularNews from "./components/PopularNews.vue";
 import { usePopularNewsStore } from "./store/popularNews";
 
-export { PopularList, usePopularNewsStore };
+export { PopularNews, usePopularNewsStore };

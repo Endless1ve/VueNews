@@ -3,7 +3,7 @@
 
   import { MainHeader, useHeaderStore } from "@/modules/Header";
   import { SearchBlock } from "@/modules/Search";
-  import { PopularList } from "@/modules/PopularNews";
+  import { PopularNews } from "@/modules/PopularNews";
 
   const headerStore = useHeaderStore();
 
@@ -17,7 +17,7 @@
     <SearchBlock>
       <MainHeader />
     </SearchBlock>
-    <PopularList />
+    <PopularNews />
   </div>
 </template>
 
