@@ -4,5 +4,9 @@ import { defineStore } from "pinia";
 export const useNewsStore = defineStore("news", () => {
   const query = ref("");
 
-  return { query };
+  function fetchNews() {
+    console.log("valid");
+  }
+
+  return { query, fetchNews };
 });

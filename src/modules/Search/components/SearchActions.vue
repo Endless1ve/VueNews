@@ -1,19 +1,38 @@
 <script setup>
+  import { computed } from "vue";
+
   import { useNewsStore } from "@/modules/News";
+
+  import {
+    setupValidation,
+    validate,
+    searchRules,
+  } from "@/shared/utils/validate";
 
   import SearchInput from "@/shared/ui/inputs/searchInput.vue";
   import SearchButton from "@/shared/ui/buttons/searchButton.vue";
 
   const newsStore = useNewsStore();
+
+  const query = computed(() => newsStore.query);
+
+  const v$ = setupValidation(searchRules, {
+    query,
+  });
+
+  const fetchNews = () => {
+    validate(v$, newsStore.fetchNews);
+  };
 </script>
 
 <template>
   <div class="searchActions">
     <SearchInput
       placeholder="Введите тему новости"
-      v-model.trim="newsStore.query" />
+      v-model.trim="newsStore.query"
+      @keyup.enter="fetchNews" />
     <div class="searchButton">
-      <SearchButton :disabled="!newsStore.query">Искать</SearchButton>
+      <SearchButton @click="fetchNews">Искать</SearchButton>
     </div>
   </div>
 </template>

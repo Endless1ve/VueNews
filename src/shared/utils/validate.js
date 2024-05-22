@@ -12,10 +12,10 @@ function setupValidation(rules, fields) {
 }
 
 function validate(v$, callback) {
-  v$.value.touch();
-  if (v$.value.$invalid) {
+  v$.value.$touch();
+  if (!v$.value.$invalid) {
     callback();
-    v$.value.reset();
+    v$.value.$reset();
   }
 }
 
