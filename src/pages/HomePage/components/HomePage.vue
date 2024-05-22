@@ -3,14 +3,12 @@
 
   import { MainHeader, useHeaderStore } from "@/modules/Header";
   import { SearchBlock } from "@/modules/Search";
-  import { usePopularNewsStore } from "@/modules/PopularNews";
+  import { PopularList } from "@/modules/PopularNews";
 
   const headerStore = useHeaderStore();
-  const popularNewsStore = usePopularNewsStore();
 
   onMounted(() => {
     headerStore.setHeaderLight();
-    popularNewsStore.fetchPopularNews();
   });
 </script>
 
@@ -19,6 +17,7 @@
     <SearchBlock>
       <MainHeader />
     </SearchBlock>
+    <PopularList />
   </div>
 </template>
 
