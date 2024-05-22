@@ -2,6 +2,7 @@
   import { onMounted } from "vue";
 
   import { usePopularNewsStore } from "../store/popularNews";
+  import PopularItem from "./PopularItem.vue";
 
   const popularNewsStore = usePopularNewsStore();
 
@@ -14,6 +15,10 @@
   <section class="popularNews">
     <template v-if="popularNewsStore.news.length > 0">
       <h2 class="popularTitle">Популярные новости за сегодня</h2>
+      <PopularItem
+        v-for="(item, index) in popularNewsStore.news"
+        :key="index"
+        :item />
     </template>
   </section>
 </template>
