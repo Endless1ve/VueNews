@@ -25,5 +25,6 @@ export const useMenuStore = defineStore("menu", () => {
     isLargeScreen,
     toggleMenu,
     handleResise,
+    closeMenu,
   };
 });
