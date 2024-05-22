@@ -40,7 +40,7 @@
       padding: 20px 40px;
     }
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 475px) {
       padding: 16px;
     }
   }
