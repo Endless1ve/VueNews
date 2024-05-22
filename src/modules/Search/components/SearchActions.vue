@@ -11,6 +11,8 @@
 
   import SearchInput from "@/shared/ui/inputs/SearchInput.vue";
   import SearchButton from "@/shared/ui/buttons/SearchButton.vue";
+  import InputError from "@/shared/ui/InputError.vue";
+  import HiddenError from "@/shared/ui/HiddenError.vue";
 
   const newsStore = useNewsStore();
 
@@ -31,6 +33,10 @@
       placeholder="Введите тему новости"
       v-model.trim="newsStore.query"
       @keyup.enter="fetchNews" />
+    <InputError v-if="v$.query.$error">
+      {{ v$.query.$errors[0].$message }}
+    </InputError>
+    <HiddenError v-else />
     <div class="searchButton">
       <SearchButton @click="fetchNews">Искать</SearchButton>
     </div>
@@ -40,6 +46,7 @@
 <style lang="scss" scoped>
   .searchActions {
     position: relative;
+    @include flex-column;
 
     @media screen and (max-width: 425px) {
       @include flex-column;
@@ -56,7 +63,7 @@
     @media screen and (max-width: 425px) {
       position: relative;
       max-width: 100%;
-      margin-top: 16px;
+      margin-top: 10px;
     }
   }
 </style>
