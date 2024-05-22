@@ -9,6 +9,9 @@ $main-light-color: #ffffff;
 $second-ligth-color: #b6bcbf;
 $bg-ligth-color: #f5f6f7;
 
+$search-image: "@/shared/images/searchBg.png";
+$search-image-min: "@/shared/images/searchBg-min.png";
+
 @mixin flex-column {
   display: flex;
   flex-direction: column;
