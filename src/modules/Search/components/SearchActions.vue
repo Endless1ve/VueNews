@@ -1,13 +1,19 @@
 <script setup>
+  import { useNewsStore } from "@/modules/News";
+
   import SearchInput from "@/shared/ui/inputs/searchInput.vue";
   import SearchButton from "@/shared/ui/buttons/searchButton.vue";
+
+  const newsStore = useNewsStore();
 </script>
 
 <template>
   <div class="searchActions">
-    <SearchInput placeholder="Введите тему новости" />
+    <SearchInput
+      placeholder="Введите тему новости"
+      v-model.trim="newsStore.query" />
     <div class="searchButton">
-      <SearchButton>Искать</SearchButton>
+      <SearchButton :disabled="!newsStore.query">Искать</SearchButton>
     </div>
   </div>
 </template>
