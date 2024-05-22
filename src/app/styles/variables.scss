@@ -9,6 +9,9 @@ $main-light-color: #ffffff;
 $second-ligth-color: #b6bcbf;
 $bg-ligth-color: #f5f6f7;
 
+$opacity-transition: opacity ease 0.6s;
+$hover-opacity: 0.7;
+
 @mixin flex-column {
   display: flex;
   flex-direction: column;
