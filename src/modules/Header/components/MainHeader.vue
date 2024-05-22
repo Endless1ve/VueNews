@@ -1,8 +1,10 @@
 <script setup>
   import { computed } from "vue";
+
   import { useHeaderStore } from "../store/header";
-  import MainLogo from "@/shared/ui/logo/MainLogo.vue";
   import { MainMenu, useMenuStore } from "@/modules/Menu";
+
+  import MainLogo from "@/shared/ui/logo/MainLogo.vue";
   import BurgerButton from "./BurgerButton.vue";
 
   const headerStore = useHeaderStore();

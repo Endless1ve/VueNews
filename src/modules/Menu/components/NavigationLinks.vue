@@ -5,10 +5,10 @@
 <template>
   <ul class="navigationLinks">
     <li class="link">
-      <MenuLink :to="'/'">Главная</MenuLink>
+      <MenuLink path="home">Главная</MenuLink>
     </li>
     <li class="link">
-      <MenuLink :to="'/about'">О проекте</MenuLink>
+      <MenuLink path="about">О проекте</MenuLink>
     </li>
   </ul>
 </template>

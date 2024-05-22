@@ -1,6 +1,8 @@
 <script setup>
   import { onMounted } from "vue";
+
   import { useMenuStore } from "../store/menu";
+
   import NavigationLinks from "./NavigationLinks";
 
   const menuStore = useMenuStore();

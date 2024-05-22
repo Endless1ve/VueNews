@@ -8,7 +8,9 @@
 </script>
 
 <template>
-  <RouterLink class="link" :to="$props.path"><slot></slot></RouterLink>
+  <RouterLink class="link" :to="{ name: $props.path }">
+    <slot></slot>
+  </RouterLink>
 </template>
 
 <style lang="scss" scoped>
