@@ -1,6 +1,7 @@
 <script setup>
   import { onMounted } from "vue";
   import { MainHeader, useHeaderStore } from "@/modules/Header";
+  import { SearchBlock } from "@/modules/Search";
 
   const headerStore = useHeaderStore();
 
@@ -11,7 +12,9 @@
 
 <template>
   <div class="home">
-    <MainHeader />
+    <SearchBlock>
+      <MainHeader />
+    </SearchBlock>
   </div>
 </template>
 
