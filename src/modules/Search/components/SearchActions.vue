@@ -9,8 +9,8 @@
     searchRules,
   } from "@/shared/utils/validate";
 
-  import SearchInput from "@/shared/ui/inputs/searchInput.vue";
-  import SearchButton from "@/shared/ui/buttons/searchButton.vue";
+  import SearchInput from "@/shared/ui/inputs/SearchInput.vue";
+  import SearchButton from "@/shared/ui/buttons/SearchButton.vue";
 
   const newsStore = useNewsStore();
 
