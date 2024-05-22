@@ -1,10 +1,19 @@
 <script setup>
-  import { SearchBlock } from "@/modules/Search";
+  import { onMounted } from "vue";
+  import { MainHeader, useHeaderStore } from "@/modules/Header";
+
+  const headerStore = useHeaderStore();
+
+  onMounted(() => {
+    headerStore.setHeaderLight();
+  });
 </script>
 
 <template>
   <div class="home">
-    <SearchBlock />
+    <SearchBlock>
+      <MainHeader />
+    </SearchBlock>
   </div>
 </template>
 
