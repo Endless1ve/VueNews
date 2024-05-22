@@ -3,6 +3,7 @@
   import { useHeaderStore } from "../store/header";
   import MainLogo from "@/shared/ui/logo/MainLogo.vue";
   import { MainMenu, useMenuStore } from "@/modules/Menu";
+  import BurgerButton from "./BurgerButton.vue";
 
   const headerStore = useHeaderStore();
   const menuStore = useMenuStore();
@@ -17,6 +18,7 @@
   <header class="header" :class="themeClass">
     <MainLogo />
     <MainMenu />
+    <BurgerButton @click="menuStore.toggleMenu" />
   </header>
 </template>
 
