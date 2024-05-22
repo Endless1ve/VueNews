@@ -1,13 +1,15 @@
 import { ref } from "vue";
 import { defineStore } from "pinia";
 import { fetchPopularNewsService } from "@/shared/services/news/news";
+import { getNowDateToAPI, getWeekAgotDateToAPI } from "@/shared/utils/date";
 
 export const usePopularNewsStore = defineStore("popularNews", () => {
   const news = ref([]);
+
   const popularNewsParams = {
     q: "JavaScript",
-    from: "2024-04-22",
-    to: "2024-05-22",
+    from: getNowDateToAPI(),
+    to: getWeekAgotDateToAPI(),
     searchIn: "title,description",
     sortBy: "popularity",
     language: "ru",

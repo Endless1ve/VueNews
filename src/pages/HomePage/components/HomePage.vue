@@ -10,9 +10,6 @@
 
   onMounted(() => {
     headerStore.setHeaderLight();
-  });
-
-  onMounted(() => {
     popularNewsStore.fetchPopularNews();
   });
 </script>
