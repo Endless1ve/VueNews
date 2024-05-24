@@ -3,5 +3,5 @@ import { baseURL, baseParams } from "./config";
 
 export const axiosInstance = axios.create({
   baseURL,
-  baseParams,
+  params: baseParams,
 });
