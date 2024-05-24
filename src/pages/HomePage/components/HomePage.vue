@@ -1,7 +1,9 @@
 <script setup>
   import { onMounted } from "vue";
+
   import { MainHeader, useHeaderStore } from "@/modules/Header";
   import { SearchBlock } from "@/modules/Search";
+  import { PopularNews } from "@/modules/PopularNews";
 
   const headerStore = useHeaderStore();
 
@@ -15,6 +17,7 @@
     <SearchBlock>
       <MainHeader />
     </SearchBlock>
+    <PopularNews />
   </div>
 </template>
 
