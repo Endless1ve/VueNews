@@ -1,4 +1,8 @@
 <script setup>
+  const $props = defineProps({
+    title: { type: String, required: true },
+  });
+
   import IconBase from "@/shared/ui/icons/IconBase.vue";
   import LoupeIcon from "@/shared/ui/icons/LoupeIcon.vue";
 </script>
@@ -9,7 +13,7 @@
       <LoupeIcon />
     </IconBase>
     <div class="content">
-      <p class="title">Ничего не найдено</p>
+      <p class="title">{{ $props.title }}</p>
     </div>
   </div>
 </template>

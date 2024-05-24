@@ -10,6 +10,7 @@ import { getLocalItem, setLocalItem } from "@/shared/utils/localStorage";
 export const usePopularNewsStore = defineStore("popularNews", () => {
   const news = ref([]);
   const isLoading = ref(false);
+  const fetchError = ref(false);
 
   const newsKey = "news";
   const timeKey = "time";
@@ -51,7 +52,7 @@ export const usePopularNewsStore = defineStore("popularNews", () => {
 
       news.value = response.data.articles;
     } catch (error) {
-      console.log(error);
+      fetchError.value = true;
     } finally {
       isLoading.value = false;
     }
@@ -60,6 +61,7 @@ export const usePopularNewsStore = defineStore("popularNews", () => {
   return {
     news,
     isLoading,
+    fetchError,
     getPopularNews,
   };
 });

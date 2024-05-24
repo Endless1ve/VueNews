@@ -17,7 +17,13 @@
 <template>
   <section class="popularNews">
     <PreloaderBlock v-if="popularNewsStore.isLoading" />
-    <NoFound v-else-if="popularNewsStore.news.length === 0" />
+
+    <NoFound
+      title="Популярные новости не найдены"
+      v-else-if="
+        popularNewsStore.fetchError || popularNewsStore.news.length === 0
+      " />
+
     <div class="content" v-else>
       <h2 class="popularTitle">Популярные новости за сегодня</h2>
       <PopularList />
