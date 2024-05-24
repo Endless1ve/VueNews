@@ -9,7 +9,7 @@
   const popularNewsStore = usePopularNewsStore();
 
   onMounted(() => {
-    popularNewsStore.fetchPopularNews();
+    popularNewsStore.getPopularNews();
   });
 </script>
 
