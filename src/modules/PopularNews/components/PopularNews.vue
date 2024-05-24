@@ -14,15 +14,15 @@
 
 <template>
   <section class="popularNews">
-    <template v-if="popularNewsStore.news.length > 0">
+    <div class="content">
       <h2 class="popularTitle">Популярные новости за сегодня</h2>
       <PopularList />
-    </template>
+    </div>
   </section>
 </template>
 
 <style lang="scss" scoped>
-  .popularNews {
+  .content {
     padding: 80px 100px;
 
     @media screen and (max-width: 1024px) {
