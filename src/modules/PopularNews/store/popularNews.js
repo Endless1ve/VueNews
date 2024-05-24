@@ -1,4 +1,4 @@
-import { ref } from "vue";
+import { computed, ref } from "vue";
 
 import { defineStore } from "pinia";
 
@@ -11,6 +11,7 @@ export const usePopularNewsStore = defineStore("popularNews", () => {
   const news = ref([]);
   const isLoading = ref(false);
   const fetchError = ref(false);
+  const isNoResults = computed(() => news.value.length === 0);
 
   const newsKey = "news";
   const timeKey = "time";
@@ -47,10 +48,12 @@ export const usePopularNewsStore = defineStore("popularNews", () => {
 
       const response = await fetchPopularNewsService(popularNewsParams);
 
-      setLocalItem(newsKey, response.data.articles);
-      setLocalItem(timeKey, Date.now());
+      if (response.data.articles.length) {
+        setLocalItem(newsKey, response.data.articles);
+        setLocalItem(timeKey, Date.now());
 
-      news.value = response.data.articles;
+        news.value = response.data.articles;
+      }
     } catch (error) {
       fetchError.value = true;
     } finally {
@@ -62,6 +65,7 @@ export const usePopularNewsStore = defineStore("popularNews", () => {
     news,
     isLoading,
     fetchError,
+    isNoResults,
     getPopularNews,
   };
 });
