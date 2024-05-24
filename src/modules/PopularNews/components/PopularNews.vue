@@ -2,6 +2,7 @@
   import { onMounted } from "vue";
 
   import { usePopularNewsStore } from "../store/popularNews";
+
   import PopularItem from "./PopularItem.vue";
 
   const popularNewsStore = usePopularNewsStore();

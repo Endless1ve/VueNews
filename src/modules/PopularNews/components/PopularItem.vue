@@ -5,8 +5,6 @@
       required: true,
     },
   });
-
-  console.log($props.item);
 </script>
 
 <template>
