@@ -10,6 +10,7 @@ import { getLocalItem, setLocalItem } from "@/shared/utils/localStorage";
 export const usePopularNewsStore = defineStore("popularNews", () => {
   const news = ref([]);
   const isLoading = ref(false);
+
   const newsKey = "news";
   const timeKey = "time";
   const queryInterval = 10815968;
@@ -30,7 +31,9 @@ export const usePopularNewsStore = defineStore("popularNews", () => {
 
     const queryTime = getLocalItem(timeKey);
 
-    if (!localNews || Date.now() - queryTime > queryInterval) {
+    const timeDifference = Date.now() - queryTime;
+
+    if (!localNews || timeDifference > queryInterval) {
       fetchPopularNews();
     } else {
       news.value = localNews;
