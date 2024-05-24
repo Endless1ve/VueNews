@@ -5,6 +5,7 @@ import { getNowDateToAPI, getWeekAgotDateToAPI } from "@/shared/utils/date";
 
 export const usePopularNewsStore = defineStore("popularNews", () => {
   const news = ref([]);
+  const isLoading = ref(false);
 
   const popularNewsParams = {
     q: "JavaScript",
@@ -19,13 +20,16 @@ export const usePopularNewsStore = defineStore("popularNews", () => {
 
   async function fetchPopularNews() {
     try {
+      isLoading.value = true;
       const response = await fetchPopularNewsService(popularNewsParams);
 
       news.value = response.data.articles;
     } catch (error) {
       console.log(error);
+    } finally {
+      isLoading.value = false;
     }
   }
 
-  return { news, popularNewsParams, fetchPopularNews };
+  return { news, isLoading, popularNewsParams, fetchPopularNews };
 });

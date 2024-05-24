@@ -4,6 +4,7 @@
   import { usePopularNewsStore } from "../store/popularNews";
 
   import PopularList from "./PopularList.vue";
+  import { PreloaderBlock } from "@/modules/Preloader";
 
   const popularNewsStore = usePopularNewsStore();
 
@@ -14,7 +15,8 @@
 
 <template>
   <section class="popularNews">
-    <div class="content">
+    <PreloaderBlock v-if="popularNewsStore.isLoading" />
+    <div class="content" v-else>
       <h2 class="popularTitle">Популярные новости за сегодня</h2>
       <PopularList />
     </div>
