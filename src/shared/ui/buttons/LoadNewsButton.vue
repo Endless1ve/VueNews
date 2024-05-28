@@ -20,5 +20,13 @@
     display: block;
     max-width: 288px;
     margin: 30px auto 0;
+    transition: $opacity-transition;
+    cursor: pointer;
+
+    @include hover-supports {
+      &:hover {
+        opacity: $hover-opacity;
+      }
+    }
   }
 </style>
