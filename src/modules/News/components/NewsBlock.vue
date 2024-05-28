@@ -4,18 +4,23 @@
   import NoFound from "@/shared/ui/NoFound.vue";
   import PreloaderBlock from "@/shared/ui/PreloaderBlock.vue";
   import NewsList from "./NewsList.vue";
+  import LoadNewsButton from "@/shared/ui/buttons/LoadNewsButton.vue";
+
   const newsStore = useNewsStore();
 </script>
 
 <template>
   <section class="news">
     <NoFound title="Ничего не найдено" v-if="newsStore.isNoResults" />
+
     <PreloaderBlock v-if="newsStore.isLoading" />
+
     <div
       class="content"
       v-if="newsStore.news.length !== 0 && !newsStore.isLoading">
       <h2 class="title">Результаты поиска</h2>
       <NewsList />
+      <LoadNewsButton v-if="newsStore.moreNews" @click="newsStore.renderNews" />
     </div>
   </section>
 </template>
