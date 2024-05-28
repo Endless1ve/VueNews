@@ -4,7 +4,6 @@ import { defineStore } from "pinia";
 
 import { fetchPopularNewsService } from "@/shared/services/news/news";
 
-import { getNowDateToAPI, getWeekAgotDateToAPI } from "@/shared/utils/date";
 import { getLocalItem, setLocalItem } from "@/shared/utils/localStorage";
 
 export const usePopularNewsStore = defineStore("popularNews", () => {
@@ -16,17 +15,6 @@ export const usePopularNewsStore = defineStore("popularNews", () => {
   const newsKey = "news";
   const timeKey = "time";
   const queryInterval = 10815968;
-
-  const popularNewsParams = {
-    q: "JavaScript",
-    from: getNowDateToAPI(),
-    to: getWeekAgotDateToAPI(),
-    searchIn: "title,description",
-    sortBy: "popularity",
-    language: "ru",
-    pageSize: 10,
-    page: 1,
-  };
 
   function getPopularNews() {
     const localNews = getLocalItem(newsKey);
@@ -46,7 +34,7 @@ export const usePopularNewsStore = defineStore("popularNews", () => {
     try {
       isLoading.value = true;
 
-      const response = await fetchPopularNewsService(popularNewsParams);
+      const response = await fetchPopularNewsService();
 
       if (response.data.articles.length) {
         setLocalItem(newsKey, response.data.articles);
