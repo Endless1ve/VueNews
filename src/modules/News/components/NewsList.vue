@@ -1,9 +1,9 @@
 <script setup>
   import { useNewsStore } from "../store/News";
+
   import NewsItem from "./NewsItem.vue";
 
   const newsStore = useNewsStore();
-  console.log(newsStore);
 </script>
 
 <template>

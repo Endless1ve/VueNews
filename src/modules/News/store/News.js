@@ -1,6 +1,9 @@
 import { computed, ref } from "vue";
+
 import { defineStore } from "pinia";
+
 import { fetchNewsService } from "@/shared/services/news/news";
+
 import { getNowDateToAPI, getWeekAgoDateToAPI } from "@/shared/utils/date";
 
 export const useNewsStore = defineStore("news", () => {
@@ -22,6 +25,7 @@ export const useNewsStore = defineStore("news", () => {
         from: getNowDateToAPI(),
         to: getWeekAgoDateToAPI(),
       };
+
       newsCounter.value = 0;
       isLoading.value = true;
       isNoResults.value = false;

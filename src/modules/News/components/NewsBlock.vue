@@ -1,9 +1,10 @@
 <script setup>
   import { useNewsStore } from "../store/News";
 
+  import NewsList from "./NewsList.vue";
+
   import NoFound from "@/shared/ui/NoFound.vue";
   import PreloaderBlock from "@/shared/ui/PreloaderBlock.vue";
-  import NewsList from "./NewsList.vue";
   import LoadNewsButton from "@/shared/ui/buttons/LoadNewsButton.vue";
 
   const newsStore = useNewsStore();
@@ -20,6 +21,7 @@
       v-if="newsStore.news.length !== 0 && !newsStore.isLoading">
       <h2 class="title">Результаты поиска</h2>
       <NewsList />
+
       <LoadNewsButton v-if="newsStore.moreNews" @click="newsStore.renderNews" />
     </div>
   </section>
