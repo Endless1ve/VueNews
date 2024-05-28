@@ -20,9 +20,7 @@
 
     <NoFound
       title="Популярные новости не найдены"
-      v-else-if="
-        popularNewsStore.fetchError || popularNewsStore.news.length === 0
-      " />
+      v-else-if="popularNewsStore.fetchError || popularNewsStore.isNoResults" />
 
     <div class="content" v-else>
       <h2 class="popularTitle">Популярные новости за сегодня</h2>
