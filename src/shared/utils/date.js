@@ -9,8 +9,14 @@ export function getNowDateToAPI() {
   return formatDateToApi(date);
 }
 
-export function getWeekAgotDateToAPI() {
+export function getMonthAgoDateToAPI() {
   const date = new Date();
-  const weekAgo = formatDateToApi(date.setMonth(date.getMonth() - 1));
+  const monthAgo = formatDateToApi(date.setMonth(date.getMonth() - 1));
+  return monthAgo;
+}
+
+export function getWeekAgoDateToAPI() {
+  const date = new Date();
+  const weekAgo = formatDateToApi(date.setDate(date.getDate() - 7));
   return weekAgo;
 }
