@@ -8,7 +8,10 @@
 
 <template>
   <div class="newsList">
-    <NewsItem v-for="item in newsStore.news" :key="item" :item />
+    <NewsItem
+      v-for="num in newsStore.newsCounter"
+      :key="num"
+      :item="newsStore.news[num - 1]" />
   </div>
 </template>
 
