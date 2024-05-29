@@ -20,3 +20,18 @@ export function getWeekAgoDateToAPI() {
   const weekAgo = formatDateToApi(date.setDate(date.getDate() - 7));
   return weekAgo;
 }
+
+export function getFormattedCardDate(date) {
+  const newDate = new Date(date);
+
+  const formatOptions = {
+    day: "2-digit",
+    month: "long",
+    year: "numeric",
+  };
+
+  const formatter = new Intl.DateTimeFormat("ru", formatOptions);
+  const correctDate = formatter.format(newDate);
+
+  return correctDate;
+}

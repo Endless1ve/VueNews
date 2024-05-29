@@ -1,4 +1,5 @@
 <script setup>
+  import { getFormattedCardDate } from "@/shared/utils/date";
   import NewsImage from "@/shared/ui/NewsImage.vue";
 
   const $props = defineProps({
@@ -17,7 +18,9 @@
         :alt="$props.item.title" />
       <div class="itemTexts">
         <div class="textsContent">
-          <p class="itemDate">{{ $props.item.publishedAt }}</p>
+          <p class="itemDate">
+            {{ getFormattedCardDate($props.item.publishedAt) }}
+          </p>
           <h4 class="itemTitle">{{ $props.item.title }}</h4>
           <p class="itemDescription">{{ $props.item.description }}</p>
         </div>
