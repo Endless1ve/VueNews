@@ -1,4 +1,6 @@
 <script setup>
+  import NewsImage from "@/shared/ui/NewsImage.vue";
+
   const $props = defineProps({
     item: {
       type: Object,
@@ -9,7 +11,7 @@
 <template>
   <article class="item" v-if="$props.item">
     <a class="itemLink" :href="$props.item.url" target="_blank">
-      <img
+      <NewsImage
         class="itemImage"
         :src="$props.item.urlToImage"
         :alt="$props.item.title" />
@@ -56,7 +58,6 @@
     margin-bottom: 16px;
     color: $second-ligth-color;
     font-family: $text-font;
-
     line-height: 133%;
   }
 
