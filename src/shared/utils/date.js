@@ -35,3 +35,7 @@ export function getFormattedCardDate(date) {
 
   return correctDate;
 }
+
+export function getCurrentYear() {
+  return new Date().getFullYear();
+}
