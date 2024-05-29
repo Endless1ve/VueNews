@@ -16,6 +16,8 @@ $search-image-min: "@/shared/images/searchBg-min.png";
 $opacity-transition: opacity ease 0.6s;
 $hover-opacity: 0.7;
 
+$gray-border: 1px $second-ligth-color solid;
+
 @mixin flex-column {
   display: flex;
   flex-direction: column;
