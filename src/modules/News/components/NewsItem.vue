@@ -1,6 +1,6 @@
 <script setup>
   import { getFormattedCardDate } from "@/shared/utils/date";
-  import NewsImage from "@/shared/ui/NewsImage.vue";
+  import NewsImage from "./NewsImage.vue";
 
   const $props = defineProps({
     item: {

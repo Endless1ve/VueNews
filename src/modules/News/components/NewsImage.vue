@@ -13,6 +13,10 @@
   const imageSource = ref($props.src);
 
   const checkImageLoad = () => {
+    if (!$props.src) {
+      imageSource.value = defaultImage;
+      return;
+    }
     const image = new Image();
     image.src = $props.src;
 
