@@ -25,6 +25,7 @@ export const useNewsStore = defineStore("news", () => {
         q: query.value,
         from: getNowDateToAPI(),
         to: getWeekAgoDateToAPI(),
+        sortBy: "publishedAt",
       };
 
       newsCounter.value = 0;
