@@ -5,6 +5,7 @@ import { defineStore } from "pinia";
 import { fetchNewsService } from "@/shared/services/news/news";
 
 import { getNowDateToAPI, getWeekAgoDateToAPI } from "@/shared/utils/date";
+import { createId } from "@/shared/utils/id";
 
 export const useNewsStore = defineStore("news", () => {
   const query = ref("");
@@ -36,7 +37,11 @@ export const useNewsStore = defineStore("news", () => {
         isNoResults.value = true;
       }
 
-      news.value = response.data.articles;
+      news.value = response.data.articles.map((article) => ({
+        ...article,
+        id: createId(),
+      }));
+
       totalNews.value = response.data.articles.length;
 
       renderNews();
