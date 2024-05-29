@@ -4,6 +4,7 @@
   import { MainHeader, useHeaderStore } from "@/modules/Header";
   import { SearchBlock } from "@/modules/Search";
   import { PopularNews } from "@/modules/PopularNews";
+  import { NewsBlock } from "@/modules/News";
 
   const headerStore = useHeaderStore();
 
@@ -17,6 +18,7 @@
     <SearchBlock>
       <MainHeader />
     </SearchBlock>
+    <NewsBlock />
     <PopularNews />
   </div>
 </template>

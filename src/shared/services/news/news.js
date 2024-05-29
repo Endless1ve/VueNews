@@ -1,13 +1,13 @@
 import { axiosInstance } from "../service";
 
-import { getNowDateToAPI, getWeekAgotDateToAPI } from "@/shared/utils/date";
+import { getNowDateToAPI, getMonthAgoDateToAPI } from "@/shared/utils/date";
 
 export function fetchPopularNewsService() {
   return axiosInstance.get("/", {
     params: {
       q: "JavaScript",
       from: getNowDateToAPI(),
-      to: getWeekAgotDateToAPI(),
+      to: getMonthAgoDateToAPI(),
       searchIn: "title,description",
       sortBy: "popularity",
       language: "ru",
@@ -15,4 +15,8 @@ export function fetchPopularNewsService() {
       page: 1,
     },
   });
+}
+
+export function fetchNewsService(params) {
+  return axiosInstance.get("/", { params });
 }

@@ -32,13 +32,16 @@
     <SearchInput
       placeholder="Введите тему новости"
       v-model.trim="newsStore.query"
-      @keyup.enter="fetchNews" />
+      @keyup.enter="fetchNews"
+      :disabled="newsStore.isLoading" />
     <InputError v-if="v$.query.$error">
       {{ v$.query.$errors[0].$message }}
     </InputError>
     <HiddenError v-else />
     <div class="searchButton">
-      <SearchButton @click="fetchNews">Искать</SearchButton>
+      <SearchButton @click="fetchNews" :disabled="newsStore.isLoading">
+        Искать
+      </SearchButton>
     </div>
   </div>
 </template>
