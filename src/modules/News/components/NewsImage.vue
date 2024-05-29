@@ -38,7 +38,7 @@
 </script>
 
 <template>
-  <img :src="imageSource" @error="handleImage" />
+  <img :src="imageSource" />
 </template>
 
 <style lang="scss" scoped></style>
