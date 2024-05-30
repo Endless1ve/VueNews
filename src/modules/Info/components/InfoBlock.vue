@@ -1,23 +1,25 @@
-<script setup></script>
+<script setup>
+  import BlockTitle from "@/shared/ui/BlockTitle/BlockTitle.vue";
+</script>
 
 <template>
   <div class="info">
-    <h2 class="title">Пользователям</h2>
+    <BlockTitle class="title">Пользователям</BlockTitle>
     <div class="content">
-      <p class="text">
+      <p>
         <strong>VUE NEWS</strong>
         - это приложение для поиска и сохранения новостей.
       </p>
-      <p class="text">
+      <p>
         Приложение написано с использованием фреймворка VUE и его
         вспомогательных инструментов, препроцессора SCSS и модульным подходом
         для создания компонентов.
       </p>
-      <p class="text">
+      <p>
         Это интуитивно понятное приложение позволяет пользователям легко
         находить, сохранять и фильтровать актуальные новости.
       </p>
-      <p class="text">
+      <p>
         Модульный подход при создании компонентов приложения позволяет
         эффективно масштабировать и поддерживать проект, обеспечивая
         производительность и удобство разработки.
@@ -28,42 +30,20 @@
 
 <style lang="scss" scoped>
   .info {
-    padding: 80px 100px;
-
-    @media screen and (max-width: 1024px) {
-      padding: 40px;
-    }
-
-    @media screen and (max-width: 475px) {
-      padding: 30px 16px;
-    }
+    @include block-padding;
   }
 
   .title {
-    font-family: $title-font;
-    font-weight: 400;
-    font-size: 40px;
-    line-height: 115%;
-    color: $main-dark-color;
-    margin: 0 0 24px 0;
-
-    @media screen and (max-width: 768px) {
-      font-size: 30px;
-    }
+    margin: 0 0 30px 0;
   }
 
   .content {
     max-width: 815px;
-
-    @include flex-column;
-    @include gap-check-supports(20px, 0);
-  }
-
-  .text {
     font-family: $text-font;
     font-size: 18px;
-    font-weight: 500;
     line-height: 133%;
     color: $main-dark-color;
+    @include flex-column;
+    @include gap-check-supports(20px, 0);
   }
 </style>

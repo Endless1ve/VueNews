@@ -33,6 +33,18 @@ $gray-border: 1px $second-ligth-color solid;
   flex-direction: row;
 }
 
+@mixin block-padding {
+  padding: 80px 100px;
+
+  @media screen and (max-width: 1024px) {
+    padding: 40px;
+  }
+
+  @media screen and (max-width: 475px) {
+    padding: 30px 16px;
+  }
+}
+
 @mixin gap-check-supports($column-gap: null, $row-gap: null) {
   @supports (gap: $column-gap) {
     gap: $column-gap $row-gap;
