@@ -28,9 +28,11 @@
 <style lang="scss" scoped>
   .list {
     margin: 0 auto;
+    width: 100%;
+    max-width: 1300px;
+    justify-content: space-evenly;
     @include flex-row;
     align-items: center;
-    justify-content: center;
     @include gap-check-supports(30px, 40px);
 
     @media screen and (max-width: 1024px) {
