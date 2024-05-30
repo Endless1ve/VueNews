@@ -1,6 +1,7 @@
 <script setup>
   import { onMounted } from "vue";
   import { MainHeader, useHeaderStore } from "@/modules/Header";
+  import { AboutSection } from "@/modules/About";
 
   const headerStore = useHeaderStore();
 
@@ -12,6 +13,7 @@
 <template>
   <div class="about">
     <MainHeader />
+    <AboutSection />
   </div>
 </template>
 
