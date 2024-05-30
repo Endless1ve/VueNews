@@ -10,7 +10,7 @@
   <div class="newsList">
     <NewsItem
       v-for="num in newsStore.newsCounter"
-      :key="newsStore.news[num - 1].id"
+      :key="newsStore.news[num - 1]?.id"
       :item="newsStore.news[num - 1]" />
   </div>
 </template>
