@@ -3,6 +3,7 @@
   import { MainHeader, useHeaderStore } from "@/modules/Header";
   import { InfoBlock } from "@/modules/Info";
   import { TechnologiesBlock } from "@/modules/Technologies";
+  import { DeveloperBlock } from "@/modules/Developer";
 
   const headerStore = useHeaderStore();
 
@@ -16,6 +17,7 @@
     <MainHeader />
     <InfoBlock />
     <TechnologiesBlock />
+    <DeveloperBlock />
   </div>
 </template>
 
