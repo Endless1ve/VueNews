@@ -14,6 +14,7 @@
   .technologies {
     @include block-padding;
     @include flex-row;
+
     background-color: $bg-ligth-color;
 
     @media screen and (max-width: 1024px) {

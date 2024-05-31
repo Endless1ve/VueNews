@@ -27,20 +27,21 @@
 
 <style lang="scss" scoped>
   .list {
-    margin: 0 auto;
+    justify-content: space-evenly;
+    align-items: center;
     width: 100%;
     max-width: 1300px;
-    justify-content: space-evenly;
+    margin: 0 auto;
+
     @include flex-row;
-    align-items: center;
     @include gap-check-supports(30px, 40px);
 
     @media screen and (max-width: 1024px) {
-      margin: 40px auto 0;
       flex-wrap: wrap;
-      width: 100%;
-      justify-content: space-between;
       justify-items: center;
+      justify-content: space-between;
+      width: 100%;
+      margin: 40px auto 0;
     }
   }
 </style>

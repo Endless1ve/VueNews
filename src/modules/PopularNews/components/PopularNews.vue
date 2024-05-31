@@ -43,15 +43,15 @@
   }
 
   .popularTitle {
-    margin: 0 0 60px 0;
-    color: $main-dark-color;
+    margin: 0 0 60px;
     font-family: $title-font;
     font-weight: 400;
     font-size: clamp(1.875rem, 1.1587rem + 1.4903vw, 2.5rem);
     line-height: 115%;
+    color: $main-dark-color;
 
     @media screen and (max-width: 768px) {
-      margin: 0 0 40px 0;
+      margin: 0 0 40px;
       font-size: 30px;
       line-height: 153%;
     }

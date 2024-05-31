@@ -22,6 +22,7 @@
 
     @media screen and (max-width: 650px) {
       align-items: flex-start;
+
       @include gap-check-supports(20px, 0);
       @include flex-column;
     }
@@ -29,6 +30,7 @@
 
   .link {
     transition: $opacity-transition;
+
     @include hover-supports {
       &:hover {
         opacity: $hover-opacity;

@@ -8,16 +8,16 @@
 </template>
 
 <style lang="scss">
-  @import "./styles/normalize.scss";
-  @import "./styles/fonts.scss";
+  @import "./styles/normalize";
+  @import "./styles/fonts";
 
   #app {
+    justify-content: space-between;
     width: 100%;
-    min-height: 100vh;
     height: 100%;
+    min-height: 100vh;
     font-weight: 400;
 
     @include flex-column;
-    justify-content: space-between;
   }
 </style>

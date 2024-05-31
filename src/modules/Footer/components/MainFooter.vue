@@ -1,5 +1,6 @@
 <script setup>
   import { getCurrentYear } from "@/shared/utils/date";
+  
   import FooterActions from "./FooterActions.vue";
 </script>
 
@@ -12,18 +13,20 @@
 
 <style lang="scss" scoped>
   .footer {
+    align-items: center;
     border-top: $gray-border;
     padding: 28px 104px;
+
     @include flex-row;
-    align-items: center;
 
     @media screen and (max-width: 1024px) {
       padding: 20px 40px;
     }
 
     @media screen and (max-width: 475px) {
-      padding: 16px;
       align-items: flex-start;
+      padding: 16px;
+
       @include gap-check-supports(30px, 0);
       @include flex-column-reverse;
     }

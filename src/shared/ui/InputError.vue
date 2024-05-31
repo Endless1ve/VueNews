@@ -6,10 +6,10 @@
 
 <style lang="scss" scoped>
   .error {
+    margin-top: 10px;
     font-family: $text-font;
     font-size: 16px;
-    color: $error-color;
     text-align: center;
-    margin-top: 10px;
+    color: $error-color;
   }
 </style>

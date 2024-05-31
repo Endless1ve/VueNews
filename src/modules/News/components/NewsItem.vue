@@ -59,40 +59,40 @@
 
   .itemDate {
     margin-bottom: 16px;
-    color: $second-ligth-color;
     font-family: $text-font;
     line-height: 133%;
+    color: $second-ligth-color;
   }
 
   .itemTitle {
+    display: -webkit-box;
     margin-bottom: 10px;
     font-family: $title-font;
     font-weight: 400;
     font-size: clamp(1.1875rem, 0.1106rem + 1.6827vw, 1.625rem);
     line-height: 118%;
-    display: -webkit-box;
+    overflow: hidden;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
-    overflow: hidden;
   }
 
   .itemDescription {
+    display: -webkit-box;
     font-family: $text-font;
     font-size: clamp(0.875rem, 0.5673rem + 0.4808vw, 1rem);
     line-height: 137%;
-    display: -webkit-box;
+    overflow: hidden;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
-    overflow: hidden;
   }
 
   .itemAuthor {
     margin-top: 5px;
-    color: $second-ligth-color;
     font-family: $text-font;
     font-weight: 700;
     line-height: 125%;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    color: $second-ligth-color;
   }
 </style>

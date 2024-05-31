@@ -24,13 +24,14 @@
     gap: 30px;
     padding: 80px 0;
     background-color: #f5f6f7;
+
     @include flex-column;
 
-    @media screen and (width <= 768px) {
+    @media screen and (max-width: 768px) {
       padding: 40px 0;
     }
 
-    @media screen and (width <= 475px) {
+    @media screen and (max-width: 475px) {
       padding: 30px 16px;
     }
   }
@@ -38,6 +39,7 @@
   .content {
     align-items: center;
     gap: 16px;
+
     @include flex-column;
   }
 

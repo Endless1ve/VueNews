@@ -1,21 +1,17 @@
-$title-font: "RobotoSlab", Arial, Helvetica, sans-serif;
-$text-font: "Roboto", Arial, Helvetica, sans-serif;
+$title-font: "RobotoSlab", arial, helvetica, sans-serif;
+$text-font: "Roboto", arial, helvetica, sans-serif;
 $main-dark-color: #1a1b22;
 $second-dark-color: #2f71e5;
 $second-dark-active: #2a65cc;
 $second-dark-hover: #347eff;
-
-$main-light-color: #ffffff;
+$main-light-color: #fff;
 $second-ligth-color: #b6bcbf;
 $bg-ligth-color: #f5f6f7;
 $error-color: #f00;
-
 $search-image: "@/shared/images/searchBg.png";
 $search-image-min: "@/shared/images/searchBg-min.png";
-
 $opacity-transition: opacity ease 0.6s;
 $hover-opacity: 0.7;
-
 $gray-border: 1px $second-ligth-color solid;
 
 @mixin flex-column {

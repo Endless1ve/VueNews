@@ -25,10 +25,12 @@
 <style lang="scss" scoped>
   .item {
     @include flex-column;
-    align-items: center;
+
     justify-content: flex-start;
-    @include gap-check-supports(10px, 0);
+    align-items: center;
     height: 100%;
+
+    @include gap-check-supports(10px, 0);
   }
 
   .title {
