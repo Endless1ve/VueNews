@@ -1,5 +1,6 @@
 <script setup>
   import { getCurrentYear } from "@/shared/utils/date";
+  
   import FooterActions from "./FooterActions.vue";
 </script>
 

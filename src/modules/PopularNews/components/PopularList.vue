@@ -1,5 +1,6 @@
 <script setup>
   import { usePopularNewsStore } from "../store/popularNews";
+  
   import PopularItem from "./PopularItem.vue";
 
   const popularNewsStore = usePopularNewsStore();

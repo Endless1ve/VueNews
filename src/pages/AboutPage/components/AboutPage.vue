@@ -1,5 +1,6 @@
 <script setup>
   import { onMounted } from "vue";
+  
   import { MainHeader, useHeaderStore } from "@/modules/Header";
   import { InfoBlock } from "@/modules/Info";
   import { TechnologiesBlock } from "@/modules/Technologies";

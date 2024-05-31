@@ -1,8 +1,10 @@
 <script setup>
   import { computed } from "vue";
 
-  import { useHeaderStore } from "../store/header";
   import { useMenuStore } from "@/modules/Menu";
+
+  import { useHeaderStore } from "../store/header";
+ 
 
   const headerStore = useHeaderStore();
   const menuStore = useMenuStore();
