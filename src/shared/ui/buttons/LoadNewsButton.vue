@@ -6,22 +6,22 @@
 
 <style lang="scss" scoped>
   .button {
-    border-radius: 80px;
-    background-color: $main-light-color;
-    padding: 18px 0;
+    display: block;
     border: none;
+    border-radius: 80px;
+    margin: 30px auto 0;
+    padding: 18px 0;
     font-family: $text-font;
     font-weight: 500;
     font-size: 18px;
     line-height: 133%;
     text-align: center;
-    color: $main-dark-color;
-    width: 100%;
-    display: block;
-    max-width: 288px;
-    margin: 30px auto 0;
+    background-color: $main-light-color;
     transition: $opacity-transition;
+    color: $main-dark-color;
     cursor: pointer;
+    width: 100%;
+    max-width: 288px;
 
     @include hover-supports {
       &:hover {

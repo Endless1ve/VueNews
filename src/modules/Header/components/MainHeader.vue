@@ -29,11 +29,12 @@
     position: relative;
     justify-content: space-between;
     align-items: stretch;
-    width: 100%;
     border-bottom: 1px $second-ligth-color solid;
     padding: 28px 104px;
-    color: $main-dark-color;
     background-color: transparent;
+    color: $main-dark-color;
+    width: 100%;
+
     @include flex-row;
 
     @media screen and (max-width: 1024px) {
@@ -50,7 +51,7 @@
   }
 
   .header-dark {
-    color: $main-light-color;
     background-color: $main-dark-color;
+    color: $main-light-color;
   }
 </style>

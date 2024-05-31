@@ -37,30 +37,18 @@
     position: absolute;
     left: 0;
     display: block;
-    width: 100%;
-    height: 3px;
-    margin: 0 auto;
     border-radius: 9px;
-    opacity: 1;
+    margin: 0 auto;
     background: $main-dark-color;
     transition: 0.25s ease-in-out;
     transform: rotate(0deg);
+    opacity: 1;
+    width: 100%;
+    height: 3px;
   }
 
   .burgerEl-light {
     background: $main-light-color;
-  }
-
-  .open .top {
-    top: 12px;
-    transform: rotate(135deg);
-  }
-  .open .middle {
-    opacity: 0;
-  }
-  .open .bottom {
-    top: 12px;
-    transform: rotate(-135deg);
   }
 
   .top {
@@ -74,4 +62,20 @@
   .bottom {
     top: 20px;
   }
+
+  .open .top {
+    top: 12px;
+    transform: rotate(135deg);
+  }
+
+  .open .middle {
+    opacity: 0;
+  }
+
+  .open .bottom {
+    top: 12px;
+    transform: rotate(-135deg);
+  }
+
+
 </style>

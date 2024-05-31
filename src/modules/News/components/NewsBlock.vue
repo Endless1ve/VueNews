@@ -29,8 +29,8 @@
 
 <style lang="scss" scoped>
   .content {
-    background-color: $bg-ligth-color;
     padding: 80px 100px;
+    background-color: $bg-ligth-color;
 
     @media screen and (max-width: 1024px) {
       padding: 40px;
@@ -42,15 +42,15 @@
   }
 
   .title {
-    color: $main-dark-color;
+    margin-bottom: 50px;
     font-family: $title-font;
     font-weight: 400;
     font-size: 40px;
     line-height: 115%;
-    margin-bottom: 50px;
+    color: $main-dark-color;
 
     @media screen and (max-width: 768px) {
-      margin: 0 0 40px 0;
+      margin: 0 0 40px;
       font-size: 30px;
       line-height: 153%;
     }

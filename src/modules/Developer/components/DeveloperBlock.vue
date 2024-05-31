@@ -35,7 +35,9 @@
   .developer {
     @include block-padding;
     @include flex-row;
+
     align-items: center;
+
     @include gap-check-supports(0, 50px);
 
     @media screen and (max-width: 768px) {
@@ -44,20 +46,21 @@
   }
 
   .image {
-    max-width: 464px;
     width: 40%;
+    max-width: 464px;
     border-radius: 100%;
 
     @media screen and (max-width: 768px) {
       width: 100%;
       max-width: 300px;
-      margin: 0 0 24px 0;
+      margin: 0 0 24px;
     }
   }
 
   .content {
     @include flex-column;
     @include gap-check-supports(15px, 0);
+
     max-width: 800px;
     margin: 40px 0 0;
 

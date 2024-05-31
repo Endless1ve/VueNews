@@ -34,15 +34,16 @@
   }
 
   .title {
-    margin: 0 0 30px 0;
+    margin: 0 0 30px;
   }
 
   .content {
-    max-width: 815px;
     font-family: $text-font;
     font-size: 18px;
     line-height: 133%;
     color: $main-dark-color;
+    max-width: 815px;
+
     @include flex-column;
     @include gap-check-supports(20px, 0);
   }

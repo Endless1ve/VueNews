@@ -49,6 +49,7 @@
 <style lang="scss" scoped>
   .searchActions {
     position: relative;
+
     @include flex-column;
 
     @media screen and (max-width: 425px) {

@@ -21,7 +21,9 @@
 <style lang="scss" scoped>
   .menu {
     @include flex-row;
+
     align-items: flex-end;
+
     @include gap-check-supports(0, 70px);
 
     @media screen and (max-width: 768px) {
@@ -32,12 +34,13 @@
       position: absolute;
       top: 102%;
       left: 0;
-      width: 100%;
+      align-items: flex-start;
       border-radius: 0 0 20px 20px;
       padding: 20px 40px 40px;
-      color: $main-light-color;
       background-color: $main-dark-color;
-      align-items: flex-start;
+      color: $main-light-color;
+      width: 100%;
+
       @include flex-column-reverse;
     }
 

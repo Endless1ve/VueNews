@@ -20,8 +20,10 @@
 <style lang="scss" scoped>
   .actions {
     @include flex-row;
+
     flex-grow: 1;
     justify-content: space-between;
+    margin: 0 auto;
 
     @media screen and (max-width: 475px) {
       width: 100%;

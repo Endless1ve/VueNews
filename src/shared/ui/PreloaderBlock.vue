@@ -15,6 +15,7 @@
     gap: 24px;
     padding: 80px 0;
     background-color: #f5f6f7;
+
     @include flex-column;
 
     @media screen and (max-width: 768px) {
@@ -27,10 +28,10 @@
   }
 
   .preloaderText {
-    color: $second-ligth-color;
     font-family: $text-font;
     font-size: 18px;
     line-height: 133%;
     text-align: center;
+    color: $second-ligth-color;
   }
 </style>
