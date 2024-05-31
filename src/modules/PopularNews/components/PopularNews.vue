@@ -6,6 +6,7 @@
   import PopularList from "./PopularList.vue";
   import PreloaderBlock from "@/shared/ui/PreloaderBlock.vue";
   import NoFound from "@/shared/ui/NoFound.vue";
+  import BlockTitle from "@/shared/ui/BlockTitle/BlockTitle.vue";
 
   const popularNewsStore = usePopularNewsStore();
 
@@ -23,7 +24,7 @@
       v-else-if="popularNewsStore.fetchError || popularNewsStore.isNoResults" />
 
     <div class="content" v-else>
-      <h2 class="popularTitle">Популярные новости за сегодня</h2>
+      <BlockTitle class="title">Популярные новости за сегодня</BlockTitle>
       <PopularList />
     </div>
   </section>
@@ -42,22 +43,11 @@
     }
   }
 
-  .popularTitle {
+  .title {
     margin: 0 0 60px;
-    font-family: $title-font;
-    font-weight: 400;
-    font-size: clamp(1.875rem, 1.1587rem + 1.4903vw, 2.5rem);
-    line-height: 115%;
-    color: $main-dark-color;
 
     @media screen and (max-width: 768px) {
       margin: 0 0 40px;
-      font-size: 30px;
-      line-height: 153%;
-    }
-
-    @media screen and (max-width: 475px) {
-      line-height: 113%;
     }
   }
 </style>

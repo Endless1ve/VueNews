@@ -4,6 +4,7 @@
   import NewsList from "./NewsList.vue";
 
   import NoFound from "@/shared/ui/NoFound.vue";
+  import BlockTitle from "@/shared/ui/BlockTitle/BlockTitle.vue";
   import PreloaderBlock from "@/shared/ui/PreloaderBlock.vue";
   import LoadNewsButton from "@/shared/ui/buttons/LoadNewsButton.vue";
 
@@ -19,7 +20,7 @@
     <div
       class="content"
       v-if="newsStore.news.length !== 0 && !newsStore.isLoading">
-      <h2 class="title">Результаты поиска</h2>
+      <BlockTitle class="title">Результаты поиска</BlockTitle>
       <NewsList />
 
       <LoadNewsButton v-if="newsStore.moreNews" @click="newsStore.renderNews" />
@@ -43,20 +44,9 @@
 
   .title {
     margin-bottom: 50px;
-    font-family: $title-font;
-    font-weight: 400;
-    font-size: 40px;
-    line-height: 115%;
-    color: $main-dark-color;
 
     @media screen and (max-width: 768px) {
       margin: 0 0 40px;
-      font-size: 30px;
-      line-height: 153%;
-    }
-
-    @media screen and (max-width: 475px) {
-      line-height: 113%;
     }
   }
 </style>
