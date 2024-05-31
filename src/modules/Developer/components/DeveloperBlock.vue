@@ -11,23 +11,20 @@
     <div class="info">
       <BlockTitle>О разработчике</BlockTitle>
       <div class="content">
+        <p class="text">Привет! Меня зовут Артём и я frontend-developer.</p>
         <p class="text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex cumque quo
-          architecto, sint aspernatur, doloribus adipisci cum commodi incidunt
-          tempore, tenetur ratione totam tempora eligendi autem! Voluptatum
-          delectus dignissimos rerum.
+          Фронтенд разработка для меня — это не просто работа, а настоящее
+          увлечение. Я люблю изучать новые технологии и подходы, которые
+          помогают сделать веб-приложения быстрее и удобнее для пользователей.
+          Трудности меня не пугают, наоборот, они мотивируют меня становиться
+          лучше. Я уверен, что каждый новый вызов — это возможность для роста и
+          саморазвития.
         </p>
         <p class="text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex cumque quo
-          architecto, sint aspernatur, doloribus adipisci cum commodi incidunt
-          tempore, tenetur ratione totam tempora eligendi autem! Voluptatum
-          delectus dignissimos rerum.
-        </p>
-        <p class="text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex cumque quo
-          architecto, sint aspernatur, doloribus adipisci cum commodi incidunt
-          tempore, tenetur ratione totam tempora eligendi autem! Voluptatum
-          delectus dignissimos rerum.
+          Моя цель — стать профессионалом в области фронтенд разработки. Я хочу
+          углубить своё понимание современных технологий и лучших практик, а
+          также научиться эффективно работать в команде и вносить значимый вклад
+          в проекты.
         </p>
       </div>
     </div>
